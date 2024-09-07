@@ -76,11 +76,7 @@ function pegarHistoria(prota, historia) {
     },
     {
       narrador: "Narrador",
-      narrativa: `Os goblins apenas trocam olhares entre si, e fogem para o que parece ser a morada deles, porém, logo você percebe que ele foram atrás de reforços. Você se encontra correndo em direção à cidade.`
-    },
-    {
-      narrador: "Narrador",
-      narrativa: `Os goblins apenas trocam olhares entre si, e fogem para o que parece ser a morada deles, porém, logo você percebe que ele foram atrás de reforços. Você se encontra correndo em direção à cidade, e, após agumas horas, você chega à um bar.`
+      narrativa: `Os goblins apenas trocam olhares entre si, e fogem para o que parece ser a morada deles, porém, logo você percebe que eles foram atrás de reforços. Você se encontra correndo em direção à cidade, e, após agumas horas, você chega à um bar.`
     },
   ];
   let bar = [
@@ -155,6 +151,40 @@ function pegarHistoria(prota, historia) {
       narrativa: `Após algumas horas de corrida e, as vezes lutas, vocês chegam no seu destino, o que assusta os goblins fazendo-os recuarem.`
     }
   ];
+  let cidade = [
+    {
+      narrador: "Narrador",
+      narrativa: `Na cidade de Aethel, você escuta um burburinho incomum que tomava conta da taverna "O Dragão Adormecido". A notícia de uma antiga pirâmide descoberta nas proximidades atraía aventureiros de todas as partes.`
+    },
+    {
+      narrador: "Protagonista",
+      narrativa: "Já ouvi falar dessa pirâmide. Dizem que ela é guardada por armadilhas mortais e que dentro dela existe um tesouro capaz de ressuscitar os mortos."
+    },
+    {
+      narrador: "Humano 1",
+      narrativa: "Lendas! Mas quem se importa com lendas? Um tesouro assim pode nos garantir uma vida de luxo!"
+    },
+    {
+      narrador: "Humana 2",
+      narrativa: "É incrível! Parece saída de um sonho."
+    },
+    {
+      narrador: "Protagonista",
+      narrativa: "Vocês podem ir, eu vou descansar aqui, lidar com um exército de goblin já foi o suficiente."
+    },
+    {
+      narrador: "Humano 1",
+      narrativa: "Sem essa, você vai descansar e amanhã nois vamos explorar pirâmide."
+    },
+    {
+      narrador: "Humana 2",
+      narrativa: "Isso aí molenga, basta dezenas de goblins atacarem e capturarem você, que estava apenas tentando viver a vida, que você vai desistir?"
+    },
+    {
+      narrador: "Narrador",
+      narrativa: "Após essa motivação, vocês riem e se despedem, cada um seguindo o caminho para sua casa, ansiando pelo dia seguinte."
+    }
+  ];
 
   if (historia == "prisao") {
     return prisao;
@@ -164,5 +194,7 @@ function pegarHistoria(prota, historia) {
     return bar;
   } else if (historia == "florestaPt2") {
     return florestaPt2;
+  } else if (historia == "cidade") {
+    return cidade;
   };
 }

@@ -1,12 +1,13 @@
 let historia = "";
 let momento = 0;
-let prisao = true;
+let prisao = false;
 let floresta = false;
 let bar = false;
 let florestaPt2 = false;
+let cidade = true;
 
 function desaparecerBotao() { // Função gerada pelo Gemini
-  document.querySelector('.botao-continuar').remove(); 
+  document.querySelector('.botao-continuar').remove();
 }
 
 function mostrarBaloes(momentoIndex) {
@@ -26,6 +27,8 @@ function mostrarBaloes(momentoIndex) {
     historia = pegarHistoria(protaInput.value, "bar");
   } else if (florestaPt2){
     historia = pegarHistoria(protaInput.value, "florestaPt2");
+  } else if (cidade){
+    historia = pegarHistoria(protaInput.value, "cidade");
   };
 
   if (!historia[momentoIndex] && prisao) {
@@ -34,16 +37,26 @@ function mostrarBaloes(momentoIndex) {
     mostrarBaloesFloresta();
     return;
   }
-  if (!historia[momentoIndex] && floresta) {
+  else if (!historia[momentoIndex] && floresta) {
     momento = 0;
     baloesContainer.innerHTML = "";
     mostrarBaloesBar();
     return;
   }
-  if (!historia[momentoIndex] && bar) {
+  else if (!historia[momentoIndex] && bar) {
     momento = 0;
     baloesContainer.innerHTML = "";
     mostrarBaloesFlorestaPt2();
+    return;
+  }
+  else if (!historia[momentoIndex] && florestaPt2) {
+    momento = 0;
+    baloesContainer.innerHTML = "";
+    mostrarBaloesCidade();
+    return;
+  }
+  else if (!historia[momentoIndex] && cidade) {
+    terminarHistoria();
     return;
   }
 
@@ -85,3 +98,14 @@ function mostrarBaloesFlorestaPt2(){
   containerHistoria.style.backgroundImage = "url('imagens/floresta-background.jpg')";
   mostrarBaloes(0);
 }
+function mostrarBaloesCidade(){
+  let containerHistoria = document.getElementById("container-historia");
+  florestaPt2 = false;
+  cidade = true;
+  containerHistoria.style.backgroundImage = "url('imagens/cidade-background.jpg')";
+  mostrarBaloes(0);
+}
+function terminarHistoria(){
+  let containerHistoria = document.getElementById("container-historia");
+  containerHistoria.remove();
+};
