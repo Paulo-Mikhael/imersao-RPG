@@ -2,6 +2,8 @@ let historia = "";
 let momento = 0;
 let prisao = true;
 let floresta = false;
+let bar = false;
+let florestaPt2 = false;
 
 function desaparecerBotao() { // Função gerada pelo Gemini
   document.querySelector('.botao-continuar').remove(); 
@@ -20,6 +22,10 @@ function mostrarBaloes(momentoIndex) {
     historia = pegarHistoria(protaInput.value, "prisao");
   } else if (floresta){
     historia = pegarHistoria(protaInput.value, "floresta");
+  } else if (bar){
+    historia = pegarHistoria(protaInput.value, "bar");
+  } else if (florestaPt2){
+    historia = pegarHistoria(protaInput.value, "florestaPt2");
   };
 
   if (!historia[momentoIndex] && prisao) {
@@ -29,11 +35,15 @@ function mostrarBaloes(momentoIndex) {
     return;
   }
   if (!historia[momentoIndex] && floresta) {
-    baloesContainer.innerHTML = `
-      <article class="balao">
-        <h1>Continua...</h1>
-      </article>
-    `;
+    momento = 0;
+    baloesContainer.innerHTML = "";
+    mostrarBaloesBar();
+    return;
+  }
+  if (!historia[momentoIndex] && bar) {
+    momento = 0;
+    baloesContainer.innerHTML = "";
+    mostrarBaloesFlorestaPt2();
     return;
   }
 
@@ -56,9 +66,22 @@ function mostrarBaloes(momentoIndex) {
 
 function mostrarBaloesFloresta(){
   let containerHistoria = document.getElementById("container-historia");
-
   prisao = false;
   floresta = true;
+  containerHistoria.style.backgroundImage = "url('imagens/floresta-background.jpg')";
+  mostrarBaloes(0);
+}
+function mostrarBaloesBar(){
+  let containerHistoria = document.getElementById("container-historia");
+  floresta = false;
+  bar = true;
+  containerHistoria.style.backgroundImage = "url('imagens/bar-background.jpg')";
+  mostrarBaloes(0);
+}
+function mostrarBaloesFlorestaPt2(){
+  let containerHistoria = document.getElementById("container-historia");
+  bar = false;
+  florestaPt2 = true;
   containerHistoria.style.backgroundImage = "url('imagens/floresta-background.jpg')";
   mostrarBaloes(0);
 }

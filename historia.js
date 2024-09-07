@@ -68,11 +68,11 @@ function pegarHistoria(prota, historia) {
     },
     {
       narrador: "Narrador",
-      narrativa: `Antes da lutar sequer começar você acerta ele em cheio`
+      narrativa: `Antes da lutar sequer começar, você acerta ele em cheio.`
     },
     {
       narrador: "Protagonista",
-      narrativa: `"Só isso?" diz você, olhando para os guardas que o acompanhavam`
+      narrativa: `"Só isso?" diz você, olhando para os guardas que o acompanhavam.`
     },
     {
       narrador: "Narrador",
@@ -92,11 +92,77 @@ function pegarHistoria(prota, historia) {
       narrador: "Protagonista",
       narrativa: `"Eae pessoal", diz você casualmente, ignorando seus machucados causados pelo Rei Goblin. "Poderiam me dar uma ajuda? Me perdi na floresta e estou indo pra cidade, porém preciso de uma escolta...", você mostra o braço ferido.`
     },
+    {
+      narrador: "Humano 1",
+      narrativa: `Mais uma aventura? Sempre bem-vindo! Mas e essa história de Rei Goblin? Você não parece tão machucado assim.`
+    },
+    {
+      narrador: "Protagonista",
+      narrativa: `Ah, é uma longa história. Mas acredite, foi bem tenso. E preciso chegar na cidade antes que eles me encontrem.`
+    },
+    {
+      narrador: "Humana 2",
+      narrativa: `Se você promete contar a história por completo, nós te ajudamos. Mas antes, vamos beber algo para celebrar essa nova aventura!`
+    },
+    {
+      narrador: "Narrador",
+      narrativa: `Após algumas horas de conversa e bebidas, você e o grupo de aventureiros se preparam para partir. Com o braço enfaixado e o coração cheio de esperança, você se junta aos seus novos companheiros de jornada.`
+    },
+    {
+      narrador: "Humano 1",
+      narrativa: `Para a cidade!`
+    },
+    {
+      narrador: "Todos",
+      narrativa: `Para a cidade!`
+    },
+    {
+      narrador: "Narrador",
+      narrativa: `E assim, o grupo saiu do bar, rumo a novas aventuras e perigos, com a promessa de uma longa jornada pela frente.`
+    },
+  ];
+  let florestaPt2 = [
+    {
+      narrador: "Narrador",
+      narrativa: `O grupo adentrou a floresta, a luz do sol filtrando-se pelas copas das árvores. O ar era úmido e carregado de um perfume adocicado de flores exóticas.`
+    },
+    {
+      narrador: "Humano 1",
+      narrativa: `Esta floresta é mais densa do que eu imaginava. Teremos que ter cuidado com as criaturas que habitam por aqui.`
+    },
+    {
+      narrador: "Narrador",
+      narrativa: `De repente, um ruído alto os alertou. O goblin raivoso aparece, você o reconhece como um dos guardas.`
+    },
+    {
+      narrador: "Protagonista",
+      narrativa: `É um dos guardas que me capturou, cuidado!`
+    },
+    {
+      narrador: "Humana 2",
+      narrativa: `Eu cuido dele! Vocês protejam os flancos!`
+    },
+    {
+      narrador: "Narrador",
+      narrativa: `O protagonista desenhou sua espada flamejante e, rapidamente, você e o grupo derrotam o goblin.`
+    },
+    {
+      narrador: "Humano 2",
+      narrativa: `Tem mais vindo, vários, acho melhor nos apressar-mos para a cidade.`
+    },
+    {
+      narrador: "Narrador",
+      narrativa: `Após algumas horas de corrida e, as vezes lutas, vocês chegam no seu destino, o que assusta os goblins fazendo-os recuarem.`
+    }
   ];
 
-  if (historia == "prisao"){
+  if (historia == "prisao") {
     return prisao;
-  } else if (historia == "floresta"){
+  } else if (historia == "floresta") {
     return floresta;
+  } else if (historia == "bar") {
+    return bar;
+  } else if (historia == "florestaPt2") {
+    return florestaPt2;
   };
 }
