@@ -1,10 +1,10 @@
 let historia = "";
 let momento = 0;
-let prisao = false;
+let prisao = true;
 let floresta = false;
 let bar = false;
 let florestaPt2 = false;
-let cidade = true;
+let cidade = false;
 
 function desaparecerBotao() { // Função gerada pelo Gemini
   document.querySelector('.botao-continuar').remove();
@@ -107,5 +107,7 @@ function mostrarBaloesCidade(){
 }
 function terminarHistoria(){
   let containerHistoria = document.getElementById("container-historia");
-  containerHistoria.remove();
+  let containerFinal = document.getElementById("container-fim");
+  containerHistoria.style.display = "none";
+  containerFinal.style.display = "flex";
 };

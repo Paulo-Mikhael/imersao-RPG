@@ -6,7 +6,7 @@ let protaInput = document.getElementById("prota-input");
 let conteudoInicial = "";
 
 function iniciarHistoria(personagem){
-  containerPrincipal.remove();
+  containerPrincipal.style.display = "none";
   containerHistoria.style.display = "block";
   protaInput.value = personagem;
 };

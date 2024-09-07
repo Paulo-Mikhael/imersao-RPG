@@ -60,7 +60,7 @@ function pegarHistoria(prota, historia) {
   let floresta = [
     {
       narrador: "Narrador",
-      narrativa: `Você e o Rei goblin sobem as escadas, vocês agora estão na floresta que anteriormente, foi seu palco de batalha, e agorá sera denovo, mas você secretamente, está carregando uma poderosa bola de fogo.`
+      narrativa: `Você e o Rei goblin sobem as escadas, vocês agora estão na floresta que denovo, será seu palco de batalha, porém, sem a intenção de prolongar a batalha, ou até mesmo entrar nela, você secretamente carrega uma poderosa bola de fogo.`
     },
     {
       narrador: "Rei Goblin",
@@ -86,15 +86,15 @@ function pegarHistoria(prota, historia) {
     },
     {
       narrador: "Protagonista",
-      narrativa: `"Eae pessoal", diz você casualmente, ignorando seus machucados causados pelo Rei Goblin. "Poderiam me dar uma ajuda? Me perdi na floresta e estou indo pra cidade, porém preciso de uma escolta...", você mostra o braço ferido.`
+      narrativa: `"Eae pessoal", diz você casualmente, ignorando seus machucados causados pelo Rei Goblin. "Poderiam me dar uma ajuda? Me meti com um Rei Goblin e estou indo pra cidade, porém preciso de uma escolta...", você mostra o braço ferido.`
     },
     {
       narrador: "Humano 1",
-      narrativa: `Mais uma aventura? Sempre bem-vindo! Mas e essa história de Rei Goblin? Você não parece tão machucado assim.`
+      narrativa: `Uma aventura é sempre bem-vinda! Mas e essa história de Rei Goblin? Você não parece tão machucado assim, só alguns arranhões.`
     },
     {
       narrador: "Protagonista",
-      narrativa: `Ah, é uma longa história. Mas acredite, foi bem tenso. E preciso chegar na cidade antes que eles me encontrem.`
+      narrativa: `Ah, é uma longa história. Adoraria conta-la, mas preciso chegar na cidade.`
     },
     {
       narrador: "Humana 2",
@@ -102,7 +102,7 @@ function pegarHistoria(prota, historia) {
     },
     {
       narrador: "Narrador",
-      narrativa: `Após algumas horas de conversa e bebidas, você e o grupo de aventureiros se preparam para partir. Com o braço enfaixado e o coração cheio de esperança, você se junta aos seus novos companheiros de jornada.`
+      narrativa: `Após algum minutos de conversa e bebidas, você e o grupo de aventureiros se preparam para partir. Com o braço enfaixado e o coração cheio de esperança, você se junta aos seus novos companheiros de jornada.`
     },
     {
       narrador: "Humano 1",
@@ -174,7 +174,7 @@ function pegarHistoria(prota, historia) {
     },
     {
       narrador: "Humano 1",
-      narrativa: "Sem essa, você vai descansar e amanhã nois vamos explorar pirâmide."
+      narrativa: "Sem essa, você vai descansar e amanhã nós vamos explorar aquela pirâmide."
     },
     {
       narrador: "Humana 2",
@@ -182,7 +182,7 @@ function pegarHistoria(prota, historia) {
     },
     {
       narrador: "Narrador",
-      narrativa: "Após essa motivação, vocês riem e se despedem, cada um seguindo o caminho para sua casa, ansiando pelo dia seguinte."
+      narrativa: "Após essa motivação, vocês riem e se despedem, cada um seguindo o caminho para sua casa, ansiando pelo dia seguinte. *Fim*"
     }
   ];
 
