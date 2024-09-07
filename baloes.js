@@ -1,12 +1,13 @@
 let historia = "";
 let momento = 0;
+let prisao = true;
+let floresta = false;
 
 function desaparecerBotao() { // Função gerada pelo Gemini
   document.querySelector('.botao-continuar').remove(); 
 }
 
 function mostrarBaloes(momentoIndex) {
-  let baloesContainer = document.getElementById("baloes-container");
   let balaoNaDireita = "";
   let balao = "";
   let botaoContinuar = `
@@ -14,11 +15,22 @@ function mostrarBaloes(momentoIndex) {
       Continuar história
     </button>
   `;
-  historia = pegarHistoria(protaInput.value);
 
-  if (!historia[momentoIndex]) {
+  if (prisao){
+    historia = pegarHistoria(protaInput.value, "prisao");
+  } else if (floresta){
+    historia = pegarHistoria(protaInput.value, "floresta");
+  };
+
+  if (!historia[momentoIndex] && prisao) {
+    momento = 0;
+    baloesContainer.innerHTML = "";
+    mostrarBaloesFloresta();
+    return;
+  }
+  if (!historia[momentoIndex] && floresta) {
     baloesContainer.innerHTML = `
-      <article class="balao ${balaoNaDireita}">
+      <article class="balao">
         <h1>Continua...</h1>
       </article>
     `;
@@ -40,4 +52,13 @@ function mostrarBaloes(momentoIndex) {
   baloesContainer.innerHTML += `${balao}`;
 
   momento += 1;
+}
+
+function mostrarBaloesFloresta(){
+  let containerHistoria = document.getElementById("container-historia");
+
+  prisao = false;
+  floresta = true;
+  containerHistoria.style.backgroundImage = "url('imagens/floresta-background.jpg')";
+  mostrarBaloes(0);
 }

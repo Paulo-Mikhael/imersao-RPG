@@ -1,6 +1,7 @@
 let personagens = [mago, guerreiro, arqueiro, bardo];
 let containerPrincipal = document.getElementById("container-principal");
 let containerHistoria = document.getElementById("container-historia");
+let baloesContainer = document.getElementById("baloes-container");
 let protaInput = document.getElementById("prota-input");
 let conteudoInicial = "";
 
