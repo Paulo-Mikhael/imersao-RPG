@@ -70,6 +70,7 @@ function mostrarBaloes(momentoIndex) {
       <h2>${historia[momentoIndex].narrativa}</h2>
       ${botaoContinuar}
     </article>
+    <img id="icone-personagem" src="personagens/${historia[momentoIndex].imagemUrl}" alt="icone do personagem atual no diálogo">
   `
 
   baloesContainer.innerHTML += `${balao}`;
