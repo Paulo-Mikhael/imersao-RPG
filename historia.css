@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+* {
+  font-family: 'Electrolize', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+.container-historia {
+  width: 100%;
+  height: 100vh;
+  background-image: url("imagens/prisao-backgroung.jpg");
+  background-size: cover;
+  background-position-y: -200px;
+  overflow-y: scroll;
+}
+.container-historia::-webkit-scrollbar{
+  display: none;
+}
+.container-historia .baloes {
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+}
+.container-historia .balao h1, .container-historia .balao h2 {
+  color: black;
+}
+.container-historia .balao .botao-continuar {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 68%);
+  border-radius: 10px;
+  color: black;
+}
+.container-historia .balao.direita .botao-continuar {
+  background-color: hsl(0, 59%, 24%);
+  color: white;
+}
+.container-historia .balao.direita h1, .container-historia .balao.direita h2 {
+  color: white;
+}
+.container-historia .baloes h1 {
+  margin-bottom: 20px;
+}
+.container-historia .baloes .balao {
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  max-width: 900px;
+  min-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  float: left;
+}
+.container-historia .baloes .balao.direita {
+  float: right;
+  background-color: #8a2424;
+}

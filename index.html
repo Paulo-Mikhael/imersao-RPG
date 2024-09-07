@@ -6,18 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Imersão RPG</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="historia.css">
   <link rel="icon" href="imagens/icone-espada.png" type="image/x-icon">
 </head>
 
 <body>
-  <div class="filter"></div>
+  <input type="text" hidden id="prota-input">
   <main id="container-principal">
     <h1>
       Escolha uma classe para continuar a história:
     </h1>
   </main>
+  <main class="container-historia" id="container-historia">
+    <div class="baloes" id="baloes-container">
+    </div>
+  </main>
   <script src="personagens.js"></script>
+  <script src="historia.js"></script>
   <script src="iniciar.js"></script>
+  <script src="baloes.js"></script>
 </body>
 
 </html>

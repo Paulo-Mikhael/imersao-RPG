@@ -1,11 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
-* {
-  font-family: 'Electrolize', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: white;
-}
-main {
+#container-principal {
   background: url("imagens/fundo-inicial.jpeg");
   width: 100%;
   min-height: 100vh;
@@ -17,28 +10,28 @@ main {
   justify-content: center;
   gap: 30px;
 }
-main h1 {
+#container-principal h1 {
   background-color: #8a2424;
   padding: 10px;
   border-radius: 10px;
 }
-main .personagens-container {
+#container-principal .personagens-container {
   display: flex;
   gap: inherit;
 }
-main .personagem-container {
+#container-principal .personagem-container {
   width: 260px;
   height: 410px;
   border: 2px solid #8a2424;
   cursor: pointer;
   border-radius: 20px;
 }
-main .personagem-container img {
+#container-principal .personagem-container img {
   width: 100%;
   height: 100%;
   border-radius: inherit;
 }
-main .janela-atributos {
+#container-principal .janela-atributos {
   position: absolute;
   width: 82%;
   height: 80%;
@@ -49,7 +42,7 @@ main .janela-atributos {
   justify-content: space-between;
   gap: 20px;
 }
-main .botao-comecar {
+#container-principal .botao-comecar {
   cursor: pointer;
   padding: 14px;
   border-radius: 10px;
@@ -60,27 +53,10 @@ main .botao-comecar {
   overflow: hidden;
   position: relative;
 }
-main .botao-comecar:after {
-  position: absolute;
-  content: "Em Breve...";
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background-color: red;
-  left: 0;
-  top: -54px;
-  transition: all .1s linear;
+#container-principal .botao-comecar:hover {
+  background-color: rgb(57, 255, 189);
 }
-main .botao-comecar:hover {
-  cursor: not-allowed;
-}
-main .botao-comecar:hover:after {
-  top: 0;
-}
-main .janela-atributos .botao-sair {
+#container-principal .janela-atributos .botao-sair {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -88,16 +64,16 @@ main .janela-atributos .botao-sair {
   right: -10px;
   cursor: pointer;
 }
-main .janela-atributos .habilidades-atributos {
+#container-principal .janela-atributos .habilidades-atributos {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   overflow-y: scroll;
 }
-main .janela-atributos .habilidades-atributos::-webkit-scrollbar {
+#container-principal .janela-atributos .habilidades-atributos::-webkit-scrollbar {
   display: none;
 }
-main .janela-atributos .habilidades-atributos .habilidade {
+#container-principal .janela-atributos .habilidades-atributos .habilidade {
   display: flex;
   width: 280px;
   flex-direction: column;
@@ -106,49 +82,52 @@ main .janela-atributos .habilidades-atributos .habilidade {
   padding: 10px;
   border-radius: 10px;
 }
-main .janela-atributos .habilidades-atributos .habilidade .habilidade-titulo {
+#container-principal .janela-atributos .habilidades-atributos .habilidade .habilidade-titulo {
   font-size: 20px;
   font-weight: bold;
   color: aquamarine;
 }
-main .janela-atributos .habilidades-atributos .habilidade p {
+#container-principal .janela-atributos .habilidades-atributos .habilidade p {
   color: beige;
 }
-main .janela-atributos .status-atributos {
+#container-principal .janela-atributos .status-atributos {
   display: flex;
   gap: 20px;
 }
-main .janela-atributos .status-atributos p {
+#container-principal .janela-atributos .status-atributos p {
   height: 26px;
   display: flex;
   align-items: center;
   gap: 8px;
   font-size: 20px;
 }
-main .janela-atributos .status-atributos p img {
+#container-principal .janela-atributos .status-atributos p img {
   height: 100%;
 }
-main .janela-atributos .texto-atributos {
+#container-principal .janela-atributos .texto-atributos {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-main .janela-atributos .texto-atributos h2 {
+#container-principal .janela-atributos .texto-atributos h2 {
   font-size: 30px;
   text-transform: capitalize;
 }
-main .janela-atributos .texto-atributos h3 {
+#container-principal .janela-atributos .texto-atributos h3 {
   color: rgb(219, 218, 218);
   font-size: 20px;
 }
-main .janela-atributos .imagem-atributos {
+#container-principal .janela-atributos .imagem-atributos {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main .janela-atributos .imagem-atributos img {
+#container-principal .janela-atributos .imagem-atributos img {
   height: 100%;
   width: 440px;
   border-radius: 10px;
+}
+.container-historia {
+  display: none;
 }

@@ -1,6 +1,14 @@
 let personagens = [mago, guerreiro, arqueiro, bardo];
 let containerPrincipal = document.getElementById("container-principal");
+let containerHistoria = document.getElementById("container-historia");
+let protaInput = document.getElementById("prota-input");
 let conteudoInicial = "";
+
+function iniciarHistoria(personagem){
+  containerPrincipal.remove();
+  containerHistoria.style.display = "block";
+  protaInput.value = personagem;
+};
 
 function prepararTelaInicial() {
   let tags = "";
@@ -44,6 +52,7 @@ function renderizarTelaDeAtributo(personagem) {
   let telaAtributos = "";
   let personagemIndex = 0;
   let habilidades = "";
+  let botaoIniciar = "";
 
   if (personagem == "mago") {
     personagemIndex = 0;
@@ -114,14 +123,18 @@ function renderizarTelaDeAtributo(personagem) {
       </figure>
     `;
 
+  botaoIniciar = `
+    <button onclick="iniciarHistoria('${personagens[personagemIndex].id}'); mostrarBaloes(0);" class="botao-comecar">
+      Iniciar Aventura!
+    </button>
+  `
+
   containerTelaAtributos = `
     <div class="janela-atributos" id="atributos-popup">
       <img src="imagens/sair-icone.png" class="botao-sair" onclick="renderizarTelaDeAtributo('')" alt="botão vermelho com um X no meio, para fechar a tela de atributos do personagem">
       ${telaAtributos}
     </div>
-    <button class="botao-comecar">
-      Iniciar Aventura!
-    </button>
+    ${botaoIniciar}
   `;
 
   containerPrincipal.innerHTML += containerTelaAtributos;
