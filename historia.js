@@ -53,7 +53,7 @@ function pegarHistoria(prota, historia) {
       imagemUrl: "narrador-pixel-art.jpeg"
     },
     {
-      narrador: "Goblin Líder",
+      narrador: "Rei Goblin",
       narrativa: `Ouvi dizer que você é um ${prota} famoso. Dizem que você consegue controlar o fogo. Queremos ver isso. Se fizer um bom show, talvez lhe demos um banquete especial.`,
       imagemUrl: "rei-goblin-pixel-art.jpeg"
     },
@@ -68,7 +68,7 @@ function pegarHistoria(prota, historia) {
       imagemUrl: "narrador-pixel-art.jpeg"
     },
     {
-      narrador: "Goblin Líder",
+      narrador: "Rei Goblin",
       narrativa: `Mostre-nos o que você pode fazer, e se conseguir, pensarei nessa possibilidade.`,
       imagemUrl: "rei-goblin-pixel-art.jpeg"
     },
@@ -222,7 +222,7 @@ function pegarHistoria(prota, historia) {
     },
     {
       narrador: "Protagonista",
-      narrativa: "Vocês podem ir, eu vou descansar aqui, lidar com um exército de goblin já foi o suficiente.",
+      narrativa: "Vocês podem ir, eu vou descansar aqui, lidar com um exército de goblins já foi o suficiente.",
       imagemUrl: protaImg
       
     },

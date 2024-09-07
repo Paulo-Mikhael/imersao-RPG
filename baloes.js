@@ -19,39 +19,31 @@ function mostrarBaloes(momentoIndex) {
     </button>
   `;
 
-  if (prisao){
+  if (prisao) {
     historia = pegarHistoria(protaInput.value, "prisao");
-  } else if (floresta){
+  } else if (floresta) {
     historia = pegarHistoria(protaInput.value, "floresta");
-  } else if (bar){
+  } else if (bar) {
     historia = pegarHistoria(protaInput.value, "bar");
-  } else if (florestaPt2){
+  } else if (florestaPt2) {
     historia = pegarHistoria(protaInput.value, "florestaPt2");
-  } else if (cidade){
+  } else if (cidade) {
     historia = pegarHistoria(protaInput.value, "cidade");
   };
 
   if (!historia[momentoIndex] && prisao) {
-    momento = 0;
-    baloesContainer.innerHTML = "";
     mostrarBaloesFloresta();
     return;
   }
   else if (!historia[momentoIndex] && floresta) {
-    momento = 0;
-    baloesContainer.innerHTML = "";
     mostrarBaloesBar();
     return;
   }
   else if (!historia[momentoIndex] && bar) {
-    momento = 0;
-    baloesContainer.innerHTML = "";
     mostrarBaloesFlorestaPt2();
     return;
   }
   else if (!historia[momentoIndex] && florestaPt2) {
-    momento = 0;
-    baloesContainer.innerHTML = "";
     mostrarBaloesCidade();
     return;
   }
@@ -78,35 +70,63 @@ function mostrarBaloes(momentoIndex) {
   momento += 1;
 }
 
-function mostrarBaloesFloresta(){
+function resetarHistoria() {
+  momento = 0;
+  baloesContainer.innerHTML = "";
+  mostrarBaloes(0);
+}
+
+function mostrarBaloesPrisao() {
+  let containerHistoria = document.getElementById("container-historia");
+  prisao = true;
+  floresta = false;
+  bar = false;
+  florestaPt2 = false;
+  cidade = false;
+  containerHistoria.style.backgroundImage = "url('imagens/prisao-background.jpg')";
+  resetarHistoria();
+}
+function mostrarBaloesFloresta() {
   let containerHistoria = document.getElementById("container-historia");
   prisao = false;
   floresta = true;
+  bar = false;
+  florestaPt2 = false;
+  cidade = false;
   containerHistoria.style.backgroundImage = "url('imagens/floresta-background.jpg')";
-  mostrarBaloes(0);
+  resetarHistoria();
 }
-function mostrarBaloesBar(){
+function mostrarBaloesBar() {
   let containerHistoria = document.getElementById("container-historia");
+  prisao = false;
   floresta = false;
   bar = true;
+  florestaPt2 = false;
+  cidade = false;
   containerHistoria.style.backgroundImage = "url('imagens/bar-background.jpg')";
-  mostrarBaloes(0);
+  resetarHistoria();
 }
-function mostrarBaloesFlorestaPt2(){
+function mostrarBaloesFlorestaPt2() {
   let containerHistoria = document.getElementById("container-historia");
+  prisao = false;
+  floresta = false;
   bar = false;
   florestaPt2 = true;
+  cidade = false;
   containerHistoria.style.backgroundImage = "url('imagens/floresta-background.jpg')";
-  mostrarBaloes(0);
+  resetarHistoria();
 }
-function mostrarBaloesCidade(){
+function mostrarBaloesCidade() {
   let containerHistoria = document.getElementById("container-historia");
+  prisao = false;
+  floresta = false;
+  bar = false;
   florestaPt2 = false;
   cidade = true;
   containerHistoria.style.backgroundImage = "url('imagens/cidade-background.jpg')";
-  mostrarBaloes(0);
+  resetarHistoria();
 }
-function terminarHistoria(){
+function terminarHistoria() {
   let containerHistoria = document.getElementById("container-historia");
   let containerFinal = document.getElementById("container-fim");
   containerHistoria.style.display = "none";

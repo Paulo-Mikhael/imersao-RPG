@@ -1,4 +1,5 @@
 let personagens = [mago, guerreiro, arqueiro, bardo];
+let historiaTimeline = document.getElementById("historia-timeline");
 let containerPrincipal = document.getElementById("container-principal");
 let containerHistoria = document.getElementById("container-historia");
 let baloesContainer = document.getElementById("baloes-container");
@@ -8,6 +9,7 @@ let conteudoInicial = "";
 function iniciarHistoria(personagem){
   containerPrincipal.style.display = "none";
   containerHistoria.style.display = "block";
+  historiaTimeline.style.display = "block";
   protaInput.value = personagem;
 };
 

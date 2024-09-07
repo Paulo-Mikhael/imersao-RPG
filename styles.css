@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+* {
+  font-family: 'Electrolize', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+#historia-timeline {
+  position: absolute;
+  padding: 20px;
+  bottom: 0;
+  right: 0;
+  display: none;
+}
+#historia-timeline button {
+  background-color: aquamarine;
+  font-size: 12px;
+  color: black;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 50%;
+  transition: all .2s linear;
+}
+#historia-timeline button:hover {
+  opacity: 100%;
+}
 #container-principal {
   background: url("imagens/fundo-inicial.jpeg");
   width: 100%;
